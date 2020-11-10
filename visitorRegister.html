@@ -15,7 +15,7 @@
 			<div class="top">
 				<div class="top-left"><img src="img/logo.png" alt="玺瑞智慧" title="玺瑞智慧"></div>
 				<div class="top-center">访客登记</div>
-				<div class="top-right">2020-10-30 10:30:11</div>
+				<div class="top-right" id="nowTime">2020-10-30 10:30:11</div>
 			</div>
 			<div class="con">
 				<div class="con-left">
@@ -24,20 +24,29 @@
 					<img src="img/con-jiao.png" alt="" class="jiao-right-top">
 					<img src="img/con-jiao.png" alt="" class="jiao-right-bottom">
 					<div class="con-left-top">
-						<div class="idcard-left">
-							<p><label>姓名</label><span>李文斌</span></p>
-							<p><label>性别</label><span>男</span></p>
-							<p><label>住址</label><span class="address">河南省郑州市金水区东风路街道长基花园</span></p>
-							<p><label>身份号码</label><span>412726199603268069</span></p>
+						<div class="idcard-front">
+							<div class="idcard-left">
+								<p><label>姓&nbsp;&nbsp;名</label><span style="font-size: 22px;" id="idName"></span></p>
+								<p><label>性&nbsp;&nbsp;别</label><span class="year" id="sex"></span><label>民&nbsp;&nbsp;族</label><span class="year" id="nation"></span></p>
+								<p><label>出&nbsp;&nbsp;生</label><span class="year" id="year"></span><label>年</label><span class="month" id="month"></span><label>月</label><span class="month" id="date"></span><label>日</label></p>
+								<p><label>住&nbsp;&nbsp;址</label><span class="address" id="address"></span></p>
+								<p style="margin-top: 20px;"><label style="letter-spacing: 0.2rem;">公民身份号码</label><span id="idNumber"></span></p>
+							</div>
+							<div class="idcard-right">
+								<img src="img/idphoto.png" alt="" id="idImg">
+							</div>
 						</div>
-						<div class="idcard-right">
-							<img src="img/idphoto.png" alt="">
+						<div class="idcard-back">
+							<div class="idcard-back-con">
+								<p><label>签发机关</label><span id="department"></span></p>
+								<p><label>有效期限</label><span id="effectData"></span></p>
+							</div>
 						</div>
 					</div>
-					<div class="con-left-center">
+					<div class="con-left-center" id="status-success">
 						<div><img src="img/dui.png" alt="">验证成功</div>
 					</div>
-					<div class="con-left-center noAproval" style="display: none;">
+					<div class="con-left-center noAproval" id="status-failed" style="display: none;">
 						<div><img src="img/cuo.png" alt="">未审核</div>
 					</div>
 					<div class="con-left-bottom">
@@ -65,17 +74,41 @@
 						</div>
 						<div class="photo">
 							<div class="photo-img">
-								<img src="img/default.png" alt="">
+								<img src="img/default.png" alt="" id="scenePhoto">
 							</div>
 							<p>现场照</p>
 						</div>
 					</div>
 					<div class="con-right-bottom">
-						<div class="reComparison">重新比对</div>
+						<div class="reComparison" style="margin-bottom: 60px;">重新比对</div>
 						<div class="sure">确认提交</div>
+					</div>
+					<div class="status-line">
+						<div class="online" style="display: none;">
+							<img src="img/online.png" alt="">
+						</div>
+						<div class="outline">
+							<img src="img/outline.png" alt="">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- 弹出层 -->
+		<div class="shadow" style="display: none;"></div>
+		<div class="faceCollection" id="faceBox" style="display: none;">
+			<div class="facePhoto">
+				<img src="img/person2.png" alt="">
+				<video id="video" autoplay></video>
+				<canvas id="canvas" width="533" height="432"></canvas>
+			</div>
+			<div class="button">
+				<div class="reCollection">重新采集人脸</div>
+				<div class="save">确认提交</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="layui/layui.js"></script>
+		<script src="js/visitorRegister.js"></script>
 	</body>
 </html>

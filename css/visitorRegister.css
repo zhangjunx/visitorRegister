@@ -26,6 +26,7 @@ html,body{
 	font-size: 36px;
 	color: #E5EFF8;
 	font-weight: 400;
+	width: 335px;
 }
 .visitorRegister .con{
 	display: flex;
@@ -69,28 +70,89 @@ html,body{
 }
 
 .visitorRegister .con .con-left .con-left-top{
-	background: #0C5CBF;
-	border-radius: 12px;
-	padding: 15px;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-around;
 }
-.visitorRegister .con .con-left .con-left-top .idcard-left p{
+.visitorRegister .con .con-left .con-left-top .idcard-front{
+	width:476px;
+	height: 300px;
+	background: url(../img/idcard-left.png) no-repeat left top;
+	display: flex;
+	padding-top: 26px;
+	padding-bottom: 30px;
+	padding-left: 25px;
+	padding-right: 24px;
+	box-sizing: border-box;
+	position: relative;
+	margin-right: 20px;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-front .idcard-left p{
 	line-height: 40px;
 }
-.visitorRegister .con .con-left .con-left-top .idcard-left p .address{
-	width: 255px;
+.visitorRegister .con .con-left .con-left-top .idcard-front .idcard-left p .year{
 	display: inline-block;
-	vertical-align: top;
+	width: 47px;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-front .idcard-left p .month{
+	display: inline-block;
+	width: 25px;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-front .idcard-left p label{
+	color: #2483A2;
+	font-size: 14px;
+	font-weight: bold;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-front .idcard-left p span{
+	font-size: 18px;
+	color: #171611;
+}
+
+
+.visitorRegister .con .con-left .con-left-top .idcard-back{
+	width:476px;
+	height: 300px;
+	background: url(../img/idcard-right.png) no-repeat left top;
+	position: relative;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-back .idcard-back-con{
+	position: absolute;
+	bottom: 20px;
+	transform: translate(2%);
+	left: 23%;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-back .idcard-back-con p{
+	line-height: 40px;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-back .idcard-back-con p label{
+	font-size: 16px;
+	color: #281B1C;
+	font-weight: bold;
+}
+.visitorRegister .con .con-left .con-left-top .idcard-back .idcard-back-con p span{
+	font-size: 18px;
+	color: #171611;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+.visitorRegister .con .con-left .con-left-top .idcard-left p .address{
+	width: 233px;
+	display: inline-block;
+	vertical-align: text-top;
+	font-size: 18px;
+	line-height: 24px;
 }
 .visitorRegister .con .con-left .con-left-top .idcard-left p label{
 	font-size: 18px;
 	color: #52F9FD;
 }
 .visitorRegister .con .con-left .con-left-top .idcard-right{
-	width: 115px;
-	height: 136px;
+	width: 140px;
+	height: 166px;
+	position: absolute;
+	top: 50px;
+	right: 16px;
 }
 .visitorRegister .con .con-left .con-left-top .idcard-right img{
 	width: 100%;
@@ -100,7 +162,7 @@ html,body{
 .visitorRegister .con .con-left .con-left-top .idcard-left p span{
 	font-size: 22px;
 	color: #E5EFF8;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 .visitorRegister .con .con-left .con-left-center{
 	width: 528px;
@@ -112,8 +174,9 @@ html,body{
 	color: #E5EFF8;
 	line-height: 76px;
 	background-color: #00ADB1;
-	margin-top: 30px;
-	margin-bottom: 60px;
+	margin: 0 auto;
+	margin-top: 18px;
+	margin-bottom: 29px;
 }
 .visitorRegister .con .con-left .noAproval{
 	background: #D2313A;
@@ -125,19 +188,22 @@ html,body{
 .visitorRegister .con .con-left .con-left-center div img{
 	margin-right: 20px;
 }
+.visitorRegister .con .con-left .con-left-bottom .indicate{
+	text-align: center;
+}
 .visitorRegister .con .con-left .con-left-bottom h2{
 	font-size: 30px;
 	color: #E5EFF8;
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 25px;
 }
 .visitorRegister .con .con-right{
 	border: 1px solid #039BDD;
 	position: relative;
-	padding: 20px 170px;
+	padding: 0 15px;
 	box-sizing: border-box;
 	height: 100%;
-	flex-grow: 0.95;
+	flex-grow: 0.9;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -201,8 +267,8 @@ html,body{
 }
 .visitorRegister .con .con-right .con-right-bottom{
 	display: flex;
-	justify-content: space-around;
-	margin-bottom: 80px;
+	flex-direction: column;
+	align-items: center;
 }
 .visitorRegister .con .con-right .con-right-bottom div{
 	width: 272px;
@@ -220,6 +286,84 @@ html,body{
 	transition: 0.5s ease;
 	opacity: 0.6;
 }
+.visitorRegister .con .con-right .status-line{
+	display: flex;
+	justify-content: flex-end;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+/* 弹出层 */
+.shadow{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.4;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.faceCollection{
+	width: 755px;
+	height: 610px;
+	background:#0B5CBF;
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	position:absolute;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom:0;
+	margin: auto;
+}
+.faceCollection .facePhoto{
+	width: 560px;
+	height: 460px;
+	background: url(../img/layer-bg.png) no-repeat left top;
+	text-align: center;
+	line-height: 455px;
+	display: inline-block;
+	position: relative;
+}
+.faceCollection .facePhoto img{
+	position: absolute;
+	left: 14px;
+	top: 14px;
+	z-index: 1;
+	opacity: 0.6;
+}
+.faceCollection .facePhoto #video{
+	width: 533px;
+	height: 432px;
+	position: absolute;
+	left: 14px;
+	top: 14px;
+}
+.faceCollection .facePhoto #canvas{
+	width: 533px;
+	height: 432px;
+	display: none;
+	position: absolute;
+	left: 14px;
+	top: 14px;
+}
+.faceCollection .button{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+.faceCollection .button div{
+	background: #008DDD;
+	border-radius: 3px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	font-size: 36px;
+	color: #fff;
+	cursor: pointer;
+}
+
+
 
 
 
